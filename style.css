@@ -17,7 +17,6 @@ body {
 }
 
 .header-corporativo {
-  
     border-bottom: none;
     box-shadow: none;
     position: fixed;
@@ -27,24 +26,36 @@ body {
     width: 100%;
     z-index: 1000;
     transition: all 0.4s ease;
+    animation: slideDown 0.6s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .header-corporativo.scrolled {
-    background-color: rgba(0, 0, 0, 0.98);
+    background-color: rgba(17, 16, 16, 0.98);
     backdrop-filter: blur(15px);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid #e0e0e0;
-    
 }
 
 .header-corporativo.scrolled nav a:hover,
 .header-corporativo.scrolled .nav-link:hover {
-  color: #d7980f !important; 
+    color: #d7980f !important;
 }
+
 .header-corporativo.scrolled nav,
 .header-corporativo.scrolled nav a,
 .header-corporativo.scrolled .nav-link {
-  color: #fff !important; 
+    color: #fff !important;
 }
 
 .header-container {
@@ -56,9 +67,9 @@ body {
     align-items: center;
 }
 
-.header-corporativo.scrolled .header-container  {
+.header-corporativo.scrolled .header-container {
+    background-color: #000000bf;
     padding: 18px 5%;
-    
 }
 
 .logo-section {
@@ -70,6 +81,28 @@ body {
     display: flex;
     gap: 3rem;
     align-items: center;
+}
+
+.nav-principal ul li {
+    animation: fadeInDown 0.8s ease-out backwards;
+}
+
+.nav-principal ul li:nth-child(1) { animation-delay: 0.1s; }
+.nav-principal ul li:nth-child(2) { animation-delay: 0.2s; }
+.nav-principal ul li:nth-child(3) { animation-delay: 0.3s; }
+.nav-principal ul li:nth-child(4) { animation-delay: 0.4s; }
+.nav-principal ul li:nth-child(5) { animation-delay: 0.5s; }
+.nav-principal ul li:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .nav-principal ul li a {
@@ -106,6 +139,7 @@ body {
 
 .nav-principal ul li a:hover {
     color: #00bcd4;
+    transform: translateY(-2px);
 }
 
 .header-corporativo.scrolled .nav-principal ul li a:hover {
@@ -140,6 +174,16 @@ body {
     height: 100%;
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%);
     z-index: 1;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .main-hero-content {
@@ -173,6 +217,18 @@ body {
     text-transform: uppercase;
     text-shadow: 5px 5px 20px rgba(0, 0, 0, 0.9);
     line-height: 1.1;
+    animation: zoomIn 1.5s ease-out;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .main-subtitulo {
@@ -183,12 +239,25 @@ body {
     color: #ffffff;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9);
     margin-top: 20px;
+    animation: fadeInUp 1.8s ease-out;
 }
 
 .seccion-contenido {
     padding: 100px 5%;
     background-color: white;
     position: relative;
+    animation: fadeInSection 1s ease-out;
+}
+
+@keyframes fadeInSection {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .seccion-nosotros {
@@ -197,7 +266,7 @@ body {
 }
 
 .seccion-servicios {
-    background: linear-gradient(135deg, #ffffff 0%, #4b7fb4 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #e8f4f8 100%);
 }
 
 .seccion-contacto {
@@ -209,10 +278,21 @@ body {
     color: white;
 }
 
+.seccion-vision h2,
+.seccion-vision p {
+    color: white;
+}
+
 .seccion-mision {
     background: linear-gradient(135deg, #164e63 0%, #0891b2 100%);
     color: white;
 }
+
+.seccion-mision h2,
+.seccion-mision p {
+    color: white;
+}
+
 .contenedor {
     max-width: 1200px;
     margin: 0 auto;
@@ -221,6 +301,18 @@ body {
 .titulo-contenido {
     text-align: center;
     margin-bottom: 50px;
+    animation: slideInFromTop 0.8s ease-out;
+}
+
+@keyframes slideInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .seccion-contenido h2 {
@@ -239,6 +331,16 @@ body {
     background: linear-gradient(90deg, #00bcd4, #fcb000);
     margin: 0 auto;
     border-radius: 3px;
+    animation: expandWidth 1s ease-out;
+}
+
+@keyframes expandWidth {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100px;
+    }
 }
 
 .seccion-contenido p {
@@ -249,6 +351,7 @@ body {
     text-align: center;
     max-width: 900px;
     margin: 0 auto;
+    animation: fadeInUp 1s ease-out;
 }
 
 .contacto-subtitulo {
@@ -265,6 +368,18 @@ body {
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
     border-radius: 20px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    animation: scaleIn 0.8s ease-out;
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .form-row {
@@ -277,7 +392,13 @@ body {
 .form-group {
     display: flex;
     flex-direction: column;
+    animation: fadeInUp 0.6s ease-out backwards;
 }
+
+.form-group:nth-child(1) { animation-delay: 0.1s; }
+.form-group:nth-child(2) { animation-delay: 0.2s; }
+.form-group:nth-child(3) { animation-delay: 0.3s; }
+.form-group:nth-child(4) { animation-delay: 0.4s; }
 
 .form-group label {
     font-family: 'Montserrat', sans-serif;
@@ -343,12 +464,23 @@ body {
     justify-content: center;
     gap: 15px;
     margin-top: 10px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
 }
 
 .btn-enviar:hover {
     background: linear-gradient(135deg, #0097a7 0%, #00838f 100%);
     transform: translateY(-3px);
     box-shadow: 0 12px 35px rgba(0, 188, 212, 0.4);
+    animation: none;
 }
 
 .btn-enviar:active {
@@ -365,7 +497,7 @@ body {
 }
 
 .footer-corporativo {
-    background-color: #121212;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
     color: white;
     padding: 60px 5% 30px;
     border-top: 5px solid #00bcd4;
@@ -378,6 +510,7 @@ body {
     gap: 60px;
     margin-bottom: 40px;
     flex-wrap: wrap;
+    animation: fadeInUp 1s ease-out;
 }
 
 .footer-logo {
@@ -390,6 +523,23 @@ body {
     justify-content: center;
     box-shadow: 0 10px 40px rgba(0, 188, 212, 0.4);
     border: 4px solid #00bcd4;
+    transition: all 0.4s ease;
+    animation: rotateIn 1s ease-out;
+}
+
+@keyframes rotateIn {
+    from {
+        opacity: 0;
+        transform: rotate(-180deg) scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(0) scale(1);
+    }
+}
+
+.footer-logo:hover {
+    transform: scale(1.1) rotate(5deg);
 }
 
 .footer-logo img {
@@ -399,6 +549,18 @@ body {
 
 .footer-info {
     text-align: left;
+    animation: fadeInRight 1s ease-out;
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .footer-info h3 {
@@ -439,6 +601,7 @@ body {
     color: #00bcd4;
     width: 30px;
     text-align: center;
+    transition: all 0.3s ease;
 }
 
 .footer-link:hover {
@@ -447,7 +610,7 @@ body {
 }
 
 .footer-link:hover i {
-    transform: scale(1.2);
+    transform: scale(1.2) rotate(5deg);
 }
 
 .footer-bottom {
@@ -463,180 +626,7 @@ body {
     letter-spacing: 0.5px;
 }
 
-@media (max-width: 1024px) {
-    .nav-principal ul {
-        gap: 2rem;
-    }
-    
-    .nav-principal ul li a {
-        font-size: 14px;
-    }
-    
-    .main-hero {
-        background-attachment: scroll;
-        height: 100vh;
-        min-height: 600px;
-    }
-    
-    .formulario-contacto {
-        padding: 40px 30px;
-    }
-    
-    .seccion-nosotros {
-        padding-top: 120px;
-    }
-}
-
-@media (max-width: 768px) {
-    .header-container {
-        padding: 15px 5%;
-    }
-    
-    .nav-principal ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1.2rem;
-    }
-    
-    .nav-principal ul li a {
-        font-size: 13px;
-        padding: 8px 0;
-    }
-    
-    .main-hero {
-        height: 100vh;
-        min-height: 500px;
-        background-attachment: scroll;
-        background-position: center center;
-    }
-    
-    .main-hero-content {
-        padding: 30px 15px;
-    }
-    
-    .seccion-contenido {
-        padding: 80px 5%;
-    }
-    
-    .seccion-nosotros {
-        padding-top: 100px;
-    }
-    
-    .formulario-contacto {
-        padding: 30px 20px;
-    }
-    
-    .form-row {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 30px;
-    }
-    
-    .footer-info {
-        text-align: center;
-    }
-    
-    .footer-contacto {
-        align-items: center;
-    }
-    
-    .footer-link {
-        justify-content: center;
-    }
-    
-    .footer-logo {
-        width: 120px;
-        height: 120px;
-    }
-    
-    .footer-logo img {
-        width: 90px;
-    }
-}
-
-@media (max-width: 480px) {
-    .header-container {
-        padding: 12px 4%;
-    }
-    
-    .nav-principal ul {
-        gap: 0.8rem;
-    }
-    
-    .nav-principal ul li a {
-        font-size: 11px;
-        letter-spacing: 0.5px;
-    }
-    
-    .main-hero {
-        height: 100vh;
-        min-height: 450px;
-    }
-    
-    .main-hero-content {
-        padding: 20px 10px;
-    }
-    
-    .seccion-contenido {
-        padding: 60px 4%;
-    }
-    
-    .seccion-nosotros {
-        padding-top: 90px;
-    }
-    
-    .form-group input,
-    .form-group textarea {
-        padding: 14px 16px;
-        font-size: 14px;
-    }
-    
-    .btn-enviar {
-        padding: 16px 30px;
-        font-size: 14px;
-    }
-    
-    .footer-logo {
-        width: 100px;
-        height: 100px;
-    }
-    
-    .footer-logo img {
-        width: 75px;
-    }
-}
-
-@media (min-width: 1920px) {
-    .header-container {
-        max-width: 1600px;
-    }
-    
-    .contenedor {
-        max-width: 1400px;
-    }
-}
-
-@media (max-width: 380px) {
-    .main-titulo {
-        font-size: 1.5rem;
-        letter-spacing: 1px;
-    }
-    
-    .main-subtitulo {
-        font-size: 0.8rem;
-    }
-    
-    .nav-principal ul li a {
-        font-size: 10px;
-    }
-}
 .servicios-grid {
-    
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
@@ -654,7 +644,13 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    animation: fadeInUp 0.8s ease-out backwards;
 }
+
+.servicio-card:nth-child(1) { animation-delay: 0.1s; }
+.servicio-card:nth-child(2) { animation-delay: 0.2s; }
+.servicio-card:nth-child(3) { animation-delay: 0.3s; }
+.servicio-card:nth-child(4) { animation-delay: 0.4s; }
 
 .servicio-card:hover {
     transform: translateY(-10px);
@@ -672,10 +668,21 @@ body {
     justify-content: center;
     margin-bottom: 25px;
     transition: all 0.4s ease;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 .servicio-card:hover .servicio-icon {
-    transform: scale(1.1) rotate(5deg);
+    transform: scale(1.1) rotate(360deg);
+    animation: none;
 }
 
 .servicio-icon i {
@@ -750,15 +757,6 @@ body {
     animation: fadeIn 0.3s ease;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
 .modal-content {
     background-color: white;
     margin: 5% auto;
@@ -818,13 +816,21 @@ body {
     border-radius: 20px 0 0 20px;
     overflow: hidden;
     background: #f0f0f0;
+    min-height: 400px;
 }
 
 .modal-image img {
     width: 100%;
     height: 100%;
+    min-height: 400px;
     object-fit: cover;
+    object-position: center;
     display: block;
+    transition: transform 0.5s ease;
+}
+
+.modal-image:hover img {
+    transform: scale(1.05);
 }
 
 .modal-text {
@@ -846,6 +852,7 @@ body {
     background: linear-gradient(90deg, #00bcd4, #fcb000);
     margin-bottom: 25px;
     border-radius: 2px;
+    animation: expandWidth 1s ease-out;
 }
 
 .modal-text p {
@@ -869,6 +876,24 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
+    animation: fadeInLeft 0.5s ease-out backwards;
+}
+
+.modal-features li:nth-child(1) { animation-delay: 0.1s; }
+.modal-features li:nth-child(2) { animation-delay: 0.2s; }
+.modal-features li:nth-child(3) { animation-delay: 0.3s; }
+.modal-features li:nth-child(4) { animation-delay: 0.4s; }
+.modal-features li:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .modal-features li i {
@@ -876,90 +901,64 @@ body {
     font-size: 18px;
 }
 
-@media (max-width: 768px) {
-    .servicios-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-    
-    .modal-content {
-        width: 95%;
-        margin: 10% auto;
-    }
-    
-    .modal-body {
-        grid-template-columns: 1fr;
-    }
-    
-    .modal-image {
-        border-radius: 20px 20px 0 0;
-        height: 250px;
-    }
-    
-    .modal-text {
-        padding: 30px 25px;
-    }
-    
-    .modal-text h2 {
-        font-size: 22px;
-    }
-    
-    .modal-text p {
-        font-size: 14px;
-    }
-    
-    .modal-features li {
-        font-size: 14px;
-    }
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
 }
 
-@media (max-width: 480px) {
-    .servicio-card {
-        padding: 30px 20px;
-    }
-    
-    .servicio-icon {
-        width: 70px;
-        height: 70px;
-    }
-    
-    .servicio-icon i {
-        font-size: 30px;
-    }
-    
-    .servicio-content h3 {
-        font-size: 18px;
-    }
-    
-    .modal-text {
-        padding: 25px 20px;
-    }
-    
-    .close {
-        right: 15px;
-        top: 15px;
-        font-size: 28px;
-        width: 35px;
-        height: 35px;
-    }
-}
-.modal-image {
-    border-radius: 20px 0 0 20px;
-    overflow: hidden;
-    background: #f0f0f0;
-    min-height: 400px;
+.hamburger span {
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+    border-radius: 3px;
 }
 
-.modal-image img {
-    width: 100%;
-    height: 100%;
-    min-height: 400px;
-    object-fit: cover;
-    object-position: center;
-    display: block;
+.header-corporativo.scrolled .hamburger span {
+    background-color: #e8e0e0;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
 }
 
 @media (max-width: 1024px) {
+    .nav-principal ul {
+        gap: 2rem;
+    }
+    
+    .nav-principal ul li a {
+        font-size: 14px;
+    }
+    
+    .main-hero {
+        background-attachment: scroll;
+        height: 100vh;
+        min-height: 600px;
+    }
+    
+    .formulario-contacto {
+        padding: 40px 30px;
+    }
+    
+    .seccion-nosotros {
+        padding-top: 120px;
+    }
+    
     .modal-content {
         width: 92%;
         margin: 8% auto;
@@ -978,8 +977,6 @@ body {
     .modal-image img {
         min-height: 300px;
         max-height: 350px;
-        object-fit: cover;
-        object-position: center;
     }
     
     .modal-text {
@@ -988,6 +985,126 @@ body {
 }
 
 @media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    .header-container {
+        position: relative;
+        padding: 15px 5%;
+    }
+    
+    .nav-principal {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: linear-gradient(135deg, #0c4a6e 0%, #0891b2 100%);
+        padding-top: 80px;
+        transition: right 0.4s ease;
+        box-shadow: -5px 0 25px rgba(0, 0, 0, 0.3);
+        z-index: 999;
+    }
+    
+    .nav-principal.active {
+        right: 0;
+    }
+    
+    .nav-principal ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 20px;
+    }
+    
+    .nav-principal ul li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        animation: none;
+    }
+    
+    .nav-principal ul li:last-child {
+        border-bottom: none;
+    }
+    
+    .nav-principal ul li a {
+        display: block;
+        padding: 18px 15px;
+        color: white !important;
+        text-shadow: none !important;
+        font-size: 16px;
+        border-bottom: none !important;
+    }
+    
+    .nav-principal ul li a::after {
+        display: none;
+    }
+    
+    .nav-principal ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding-left: 25px;
+        color: #fcb000 !important;
+    }
+    
+    .main-hero {
+        height: 100vh;
+        min-height: 500px;
+        background-attachment: scroll;
+    }
+    
+    .main-hero-content {
+        padding: 30px 15px;
+    }
+    
+    .seccion-contenido {
+        padding: 80px 5%;
+    }
+    
+    .seccion-nosotros {
+        padding-top: 100px;
+    }
+    
+    .formulario-contacto {
+        padding: 30px 20px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .footer-info {
+        text-align: center;
+    }
+    
+    .footer-contacto {
+        align-items: center;
+    }
+    
+    .footer-link {
+        justify-content: center;
+    }
+    
+    .footer-logo {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .footer-logo img {
+        width: 90px;
+    }
+    
+    .servicios-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
     .modal-content {
         width: 95%;
         margin: 10% auto;
@@ -995,12 +1112,7 @@ body {
         overflow-y: auto;
     }
     
-    .modal-body {
-        grid-template-columns: 1fr;
-    }
-    
     .modal-image {
-        border-radius: 20px 20px 0 0;
         min-height: 250px;
         max-height: 280px;
     }
@@ -1008,9 +1120,6 @@ body {
     .modal-image img {
         min-height: 250px;
         max-height: 280px;
-        width: 100%;
-        object-fit: cover;
-        object-position: center;
     }
     
     .modal-text {
@@ -1019,28 +1128,10 @@ body {
     
     .modal-text h2 {
         font-size: 22px;
-        margin-bottom: 12px;
-    }
-    
-    .modal-line {
-        width: 50px;
-        height: 3px;
-        margin-bottom: 20px;
     }
     
     .modal-text p {
         font-size: 14px;
-        line-height: 1.7;
-        margin-bottom: 25px;
-    }
-    
-    .modal-features li {
-        font-size: 14px;
-        margin-bottom: 12px;
-    }
-    
-    .modal-features li i {
-        font-size: 16px;
     }
     
     .close {
@@ -1053,14 +1144,80 @@ body {
 }
 
 @media (max-width: 480px) {
+    .hamburger span {
+        width: 25px;
+        height: 2.5px;
+    }
+    
+    .nav-principal {
+        width: 250px;
+    }
+    
+    .nav-principal ul li a {
+        font-size: 14px;
+        padding: 16px 12px;
+    }
+    
+    .header-container {
+        padding: 12px 4%;
+    }
+    
+    .main-hero {
+        height: 100vh;
+        min-height: 450px;
+    }
+    
+    .main-hero-content {
+        padding: 20px 10px;
+    }
+    
+    .seccion-contenido {
+        padding: 60px 4%;
+    }
+    
+    .seccion-nosotros {
+        padding-top: 90px;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 14px 16px;
+        font-size: 14px;
+    }
+    
+    .btn-enviar {
+        padding: 16px 30px;
+        font-size: 14px;
+    }
+    
+    .footer-logo {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .footer-logo img {
+        width: 75px;
+    }
+    
+    .servicio-card {
+        padding: 30px 20px;
+    }
+    
+    .servicio-icon {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .servicio-icon i {
+        font-size: 30px;
+    }
+    
     .modal-content {
         width: 96%;
         margin: 15% auto;
-        border-radius: 16px;
     }
     
     .modal-image {
-        border-radius: 16px 16px 0 0;
         min-height: 220px;
         max-height: 250px;
     }
@@ -1068,9 +1225,6 @@ body {
     .modal-image img {
         min-height: 220px;
         max-height: 250px;
-        width: 100%;
-        object-fit: cover;
-        object-position: center;
     }
     
     .modal-text {
@@ -1079,34 +1233,6 @@ body {
     
     .modal-text h2 {
         font-size: 20px;
-        margin-bottom: 10px;
-    }
-    
-    .modal-line {
-        width: 45px;
-        height: 3px;
-        margin-bottom: 18px;
-    }
-    
-    .modal-text p {
-        font-size: 13px;
-        line-height: 1.6;
-        margin-bottom: 20px;
-    }
-    
-    .modal-features {
-        margin-top: 15px;
-    }
-    
-    .modal-features li {
-        font-size: 13px;
-        margin-bottom: 10px;
-        gap: 10px;
-    }
-    
-    .modal-features li i {
-        font-size: 15px;
-        min-width: 18px;
     }
     
     .close {
@@ -1119,6 +1245,15 @@ body {
 }
 
 @media (max-width: 380px) {
+    .main-titulo {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+    
+    .main-subtitulo {
+        font-size: 0.8rem;
+    }
+    
     .modal-content {
         width: 98%;
         margin: 18% auto;
@@ -1137,73 +1272,14 @@ body {
     .modal-text {
         padding: 20px 18px;
     }
-    
-    .modal-text h2 {
-        font-size: 18px;
-    }
-    
-    .modal-text p {
-        font-size: 12px;
-    }
-    
-    .modal-features li {
-        font-size: 12px;
-        gap: 8px;
-    }
 }
 
-@media (min-width: 1025px) and (max-width: 1400px) {
-    .modal-content {
-        max-width: 800px;
+@media (min-width: 1920px) {
+    .header-container {
+        max-width: 1600px;
     }
     
-    .modal-image {
-        min-height: 450px;
-    }
-    
-    .modal-image img {
-        min-height: 450px;
-    }
-    
-    .modal-text {
-        padding: 45px 38px;
-    }
-}
-
-@media (min-width: 1401px) {
-    .modal-image {
-        min-height: 500px;
-    }
-    
-    .modal-image img {
-        min-height: 500px;
-    }
-}
-
-@media (orientation: landscape) and (max-height: 600px) {
-    .modal-content {
-        margin: 2% auto;
-        max-height: 95vh;
-        overflow-y: auto;
-    }
-    
-    .modal-body {
-        grid-template-columns: 1fr 1fr;
-    }
-    
-    .modal-image {
-        border-radius: 20px 0 0 20px;
-        min-height: 100%;
-        max-height: none;
-    }
-    
-    .modal-image img {
-        min-height: 100%;
-        max-height: none;
-        height: 100%;
-    }
-    
-    .modal-text {
-        padding: 30px 25px;
+    .contenedor {
+        max-width: 1400px;
     }
 }
