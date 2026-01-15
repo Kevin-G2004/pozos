@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="imagenes/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta name="description" content="Soluciones Agro Hídricas - Tu fuente confiable en perforación de pozos">
+    <meta name="keywords" content="perforación de pozos, soluciones hídricas, agua, agrícola">
+    <title>Soluciones Agro Hídricas | Perforación de Pozos</title>
+</head>
+<body>
+    <header class="header-corporativo">
+        <div class="header-container">
+         
+            <nav class="nav-principal">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="main-hero">
+            <div class="overlay"></div>
+            <div class="main-hero-content">
+                <h1 class="main-titulo">Soluciones Agro Hídricas</h1>
+                <p class="main-subtitulo">Tu Fuente Confiable en Perforación de Pozos</p>
+            </div>
+        </section>
+
+        <section id="nosotros" class="seccion-contenido seccion-nosotros" style="background-color: black;">
+            <div class="contenedor">
+                <div class="titulo-contenido">
+                    <h2>Sobre Nosotros</h2>
+                    <div class="linea-decorativa"></div>
+                </div>
+                <p>Somos una empresa líder en perforación de pozos y soluciones hídricas con años de experiencia en el sector agrícola. Nos comprometemos a proporcionar servicios de la más alta calidad, garantizando el acceso confiable al agua para tus proyectos.</p>
+            </div>
+        </section>
+
+        <section id="servicios" class="seccion-contenido seccion-servicios">
+            <div class="contenedor">
+                <div class="titulo-contenido">
+                    <h2>Nuestros Servicios</h2>
+                    <div class="linea-decorativa"></div>
+                </div>
+                <p>Ofrecemos servicios especializados en perforación de pozos profundos, mantenimiento de sistemas hídricos, análisis de calidad de agua y asesoría técnica integral para proyectos agrícolas e industriales.</p>
+            </div>
+        </section>
+
+        <section id="contacto" class="seccion-contenido seccion-contacto">
+            <div class="contenedor">
+                <div class="titulo-contenido">
+                    <h2>Habla Con Nosotros</h2>
+                    <div class="linea-decorativa"></div>
+                    <p class="contacto-subtitulo">Puedes enviarnos un mensaje y nos pondremos en contacto lo más pronto posible</p>
+                </div>
+                
+                <form class="formulario-contacto" action="https://formsubmit.co/solucioneshidricas2024@gmail.com" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nombre">Nombre Completo</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="telefono">Número de Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="55154574" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="asunto">Asunto</label>
+                            <input type="text" id="asunto" name="asunto" placeholder="Motivo de contacto" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-enviar">
+                        <span>Enviar Mensaje</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                    
+                    <input type="hidden" name="_next" value="https://tusitio.com/gracias.html">
+                    <input type="hidden" name="_subject" value="Nuevo mensaje desde Soluciones Agro Hídricas">
+                    <input type="hidden" name="_captcha" value="false">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-corporativo">
+        <div class="contenedor">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="imagenes/logo.png" alt="Logo Soluciones Agro Hídricas">
+                </div>
+                <div class="footer-info">
+                    <h3>Soluciones Agro Hídricas</h3>
+                    <p>Tu fuente confiable en perforación de pozos</p>
+                    <div class="footer-contacto">
+                        <a href="mailto:solucioneshidricas2024@gmail.com" class="footer-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>solucioneshidricas2024@gmail.com</span>
+                        </a>
+                        <a href="https://wa.me/50255154574" target="_blank" class="footer-link">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>55154574 / 54826995</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Soluciones Agro Hídricas. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
