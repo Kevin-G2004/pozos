@@ -1283,3 +1283,25 @@ body {
         max-width: 1400px;
     }
 }
+.nav-logo-mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .nav-logo-mobile {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .nav-logo-mobile img {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+        background: white;
+        padding: 10px;
+        border-radius: 50%;
+    }
+}
