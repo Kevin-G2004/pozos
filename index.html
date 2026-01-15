@@ -18,6 +18,8 @@
                 <ul>
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#nosotros">Nosotros</a></li>
+                     <li><a href="#vision">Visión</a></li>
+                                 <li><a href="#mision">Misión</a></li>
                     <li><a href="#servicios">Servicios</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
@@ -29,8 +31,8 @@
         <section id="inicio" class="main-hero">
             <div class="overlay"></div>
             <div class="main-hero-content">
-                <h1 class="main-titulo">Soluciones Agro Hídricas</h1>
-                <p class="main-subtitulo">Tu Fuente Confiable en Perforación de Pozos</p>
+                <h1 class="main-titulo" >Soluciones Agro Hídricas</h1>
+                <p class="main-subtitulo" style="color: black;">Tu Fuente Confiable en Perforación de Pozos</p>
             </div>
         </section>
 
@@ -40,19 +42,195 @@
                     <h2>Sobre Nosotros</h2>
                     <div class="linea-decorativa"></div>
                 </div>
-                <p>Somos una empresa líder en perforación de pozos y soluciones hídricas con años de experiencia en el sector agrícola. Nos comprometemos a proporcionar servicios de la más alta calidad, garantizando el acceso confiable al agua para tus proyectos.</p>
+                <p style="color: black;">Somos una empresa 100%
+guatemalteca que se especializa en la perforación y
+manteamiento de pozos de agua para garantizar que
+comunidades, hogares e industrias tengan una fuente
+de agua confiable y segura.</p>
+            </div>
+        </section>
+     <section id="vision" class="seccion-contenido seccion-vision">
+            <div class="contenedor">
+                <div class="titulo-contenido">
+                    <h2>Visión</h2>
+                    <div class="linea-decorativa"></div>
+                </div>
+              <p style="color: rgb(0, 0, 0);">Ser una de las empresas líderes en Guatemala que
+ofrecen soluciones hidráulicas de manera integral a los
+clientes.</p>
+        </section>
+
+
+          <section id="mision" class="seccion-contenido seccion-mision">
+            <div class="contenedor">
+                <div class="titulo-contenido">
+                    <h2 style="color: black;">Misión</h2>
+                    <div class="linea-decorativa"></div>
+                </div>
+                <p style="color: black;">Ofrecerle a los clientes soluciones hidráulicas que
+cumplan con sus necesidades, respetando el medio
+ambiente y de manera profesional..</p>
             </div>
         </section>
 
-        <section id="servicios" class="seccion-contenido seccion-servicios">
-            <div class="contenedor">
-                <div class="titulo-contenido">
-                    <h2>Nuestros Servicios</h2>
-                    <div class="linea-decorativa"></div>
-                </div>
-                <p>Ofrecemos servicios especializados en perforación de pozos profundos, mantenimiento de sistemas hídricos, análisis de calidad de agua y asesoría técnica integral para proyectos agrícolas e industriales.</p>
+     <section id="servicios" class="seccion-contenido seccion-servicios">
+    <div class="contenedor">
+        <div class="titulo-contenido">
+            <h2>Nuestros Servicios</h2>
+            <div class="linea-decorativa"></div>
+        </div>
+        
+        <div class="servicios-grid">
+    <div class="servicio-card">
+        <div class="servicio-icon">
+            <i class="fas fa-water"></i>
+        </div>
+        <div class="servicio-content">
+            <h3>Perforación de Pozos de Agua</h3>
+            <p>Servicios especializados en perforación profunda con tecnología de punta para garantizar un suministro confiable de agua</p>
+        </div>
+        <button class="btn-detalles" onclick="openModal('modal1')">
+            <span>Ver Detalles</span>
+            <i class="fas fa-arrow-right"></i>
+        </button>
+    </div>
+
+    <div class="servicio-card">
+        <div class="servicio-icon">
+            <i class="fas fa-tools"></i>
+        </div>
+        <div class="servicio-content">
+            <h3>Limpieza y Mantenimiento de Pozos Mecánicos</h3>
+            <p>Limpieza profesional mediante compresor de aire y bomba de extracción para mantener su pozo en óptimas condiciones</p>
+        </div>
+        <button class="btn-detalles" onclick="openModal('modal2')">
+            <span>Ver Detalles</span>
+            <i class="fas fa-arrow-right"></i>
+        </button>
+    </div>
+
+    <div class="servicio-card">
+        <div class="servicio-icon">
+            <i class="fas fa-wrench"></i>
+        </div>
+        <div class="servicio-content">
+            <h3>Instalación de Equipo de Bombeo</h3>
+            <p>Instalación y configuración de sistemas de bombeo sumergible y superficial adaptados a sus necesidades</p>
+        </div>
+        <button class="btn-detalles" onclick="openModal('modal3')">
+            <span>Ver Detalles</span>
+            <i class="fas fa-arrow-right"></i>
+        </button>
+    </div>
+
+    <div class="servicio-card">
+        <div class="servicio-icon">
+            <i class="fas fa-tachometer-alt"></i>
+        </div>
+        <div class="servicio-content">
+            <h3>Aforos de Pozos Mecánicos</h3>
+            <p>Medición técnica del caudal y rendimiento de su pozo para determinar su capacidad óptima de producción</p>
+        </div>
+        <button class="btn-detalles" onclick="openModal('modal4')">
+            <span>Ver Detalles</span>
+            <i class="fas fa-arrow-right"></i>
+        </button>
+    </div>
+</div>
+    </div>
+</section>
+
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal1')">&times;</span>
+        <div class="modal-body">
+            <div class="modal-image">
+                <img src="imagenes/perforacion_pozos.png" alt="Perforación de Pozos">
             </div>
-        </section>
+            <div class="modal-text">
+                <h2>Perforación de Pozos de Agua</h2>
+                <div class="modal-line"></div>
+                <p>Perforamos pozos mecánicos en los siguientes diámetros (en PVC 250
+PSI o Acero al Carbón):.</p>
+                <ul class="modal-features">
+                    <li><i class="fas fa-check-circle"></i> Perforación con broca tricónica de 9-7/8 pulgadas y entubado en 6
+pulgadas.
+</li>
+                    <li><i class="fas fa-check-circle"></i> Perforación con broca tricónica de 12-1/4 pulgadas y entubado en 8
+pulgadas.</li>
+                    <li><i class="fas fa-check-circle"></i> Perforación con broca tricónica de 15-1/4 pulgadas y entubado en 10
+pulgadas.</li>
+                    <li><i class="fas fa-check-circle"></i> Perforación con broca tricónica de 19» pulgadas y entubado en 12
+pulgadas.</li>
+                     <li><i class="fas fa-check-circle"></i>Perforación con broca tricónica de 26 pulgadas y entubado en 14 y 16
+pulgadas.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal2')">&times;</span>
+        <div class="modal-body">
+            <div class="modal-image">
+                <img src="imagenes/limpieza_pozos_mecanicos.png" alt="Limpieza y mantenimiento de pozos mecánicos">
+            </div>
+            <div class="modal-text">
+                <h2>Limpieza y mantenimiento de pozos mecánicos.</h2>
+                <div class="modal-line"></div>
+                <p>Limpieza de pozos mecánicos por medio de compresor
+de aire y bomba de extracción.</p>
+             
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal3')">&times;</span>
+        <div class="modal-body">
+            <div class="modal-image">
+                <img src="imagenes/estudios.jpg" alt="Estudios Hidrogeológicos">
+            </div>
+            <div class="modal-text">
+                <h2>Estudios Hidrogeológicos</h2>
+                <div class="modal-line"></div>
+                <p>Realizamos análisis técnicos exhaustivos del suelo y recursos hídricos subterráneos para determinar la viabilidad y ubicación óptima de pozos.</p>
+                <ul class="modal-features">
+                    <li><i class="fas fa-check-circle"></i> Análisis de suelo</li>
+                    <li><i class="fas fa-check-circle"></i> Mapeo hidrogeológico</li>
+                    <li><i class="fas fa-check-circle"></i> Estudios de factibilidad</li>
+                    <li><i class="fas fa-check-circle"></i> Reportes detallados</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal4" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal4')">&times;</span>
+        <div class="modal-body">
+            <div class="modal-image">
+                <img src="imagenes/aforos.png" alt="Aforos de pozos mecánicos">
+            </div>
+            <div class="modal-text">
+                <h2>Aforos</h2>
+                <div class="modal-line"></div>
+                <p>Aforos de pozos mecánicos 6 horas, 12 horas y 24
+horas.</p>
+            
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
 
         <section id="contacto" class="seccion-contenido seccion-contacto">
             <div class="contenedor">
@@ -109,8 +287,7 @@
         <div class="contenedor">
             <div class="footer-content">
                 <div class="footer-logo">
-               <img src="imagenes/logo.png" alt="Logo Soluciones Agro Hídricas">
-
+                    <img src="imagenes/logo.png" alt="Logo Soluciones Agro Hídricas">
                 </div>
                 <div class="footer-info">
                     <h3>Soluciones Agro Hídricas</h3>
@@ -136,3 +313,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
